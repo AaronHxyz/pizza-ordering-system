@@ -1,0 +1,88 @@
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+label {
+    text-align: right;
+}
+
+/* crust single horizontal row */
+.radio-wrapper {
+    grid-column: 2;
+    display: flex;
+    gap: 1rem;
+}
+
+/* allow options to wrap toppings*/
+.checkbox-wrapper {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* submit and Reset buttons */
+.button-wrapper {
+    grid-column: 2;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Allow table to scroll horizontally if necessary */
+aside {
+    overflow-x: auto;
+}
+
+/* Valid fields */
+input:valid,
+select:valid {
+    border: 2px solid green;
+}
+
+/* Invalid fields after interaction */
+input:focus:invalid,
+select:focus:invalid {
+    border: 2px solid red;
+}
+
+/* don't show red until user types */
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
